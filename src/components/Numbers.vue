@@ -7,7 +7,7 @@ let limit = ref<number>(100); // it was made reactive.
 
 // transforming function into computed to optimize n
 const n = computed<number[]>(() => {
-  const forceRule = Math.min(100, Math.max(1, limit.value));
+  const forceRule = Math.min(100, Math.max(1, limit.value)); // restriction from 1 to 100 to enforce the rule.
 	let numbers: number[] = [];
 	for(let i = 1; i <= forceRule; i++) { numbers.push(i); } // improving the way the array is populated.
 
