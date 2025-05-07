@@ -30,3 +30,7 @@ The `n()` function is used multiple times in the template, which is not necessar
 ## Sixth Issue - Bad way of populating the array
 The `...` (*spread operator*) is being used to rebuild the array repeatedly, but in this case, it's unnecessary.
 To optimize the operation, I'll use `.push()` instead.
+
+## Observation
+The code wasn’t typed, and since the script is set to TypeScript,
+I added proper typings as a best practice to ensure correct execution.

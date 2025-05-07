@@ -3,12 +3,12 @@ import {computed, ref} from "vue";
 
 // numbers array removed, not needed
 
-let limit = ref(100); // it was made reactive.
+let limit = ref<number>(100); // it was made reactive.
 
 // transforming function into computed to optimize n
-const n = computed(() => {
-  const forceRule = Math.min(100, Math.max(1, limit.value)); // restriction from 1 to 100 to enforce the rule.
-	let numbers = [];
+const n = computed<number[]>(() => {
+  const forceRule = Math.min(100, Math.max(1, limit.value));
+	let numbers: number[] = [];
 	for(let i = 1; i <= forceRule; i++) { numbers.push(i); } // improving the way the array is populated.
 
 	return numbers.sort(() => Math.random() - 0.5);
@@ -20,7 +20,7 @@ function validateLimit() {
   if (limit.value > 100) limit.value = 100
 }
 
-function hov(number) {
+function hov(number: number): void {
   const nums = document.querySelectorAll('.number');
 
   for(let i = 0; i < nums.length; i++)
@@ -35,8 +35,7 @@ function hov(number) {
   }
 }
 
-function reset()
-{
+function reset(): void {
 	const nums = document.querySelectorAll('.number');
 	nums.forEach(num => num.classList.remove('active'))
 }
