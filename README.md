@@ -1,5 +1,5 @@
 ## Note:
-**More detailed explanations of the changes can be found in the EXPLANATION.md file located in the src/components folder.**
+More detailed explanations of the changes can be found in the **EXPLANATION.md** file located in the src/components folder.
 
 ### Step 1: Install dependencies
 Open your terminal and run:
